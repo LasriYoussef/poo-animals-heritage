@@ -1,5 +1,4 @@
 package fr.afpa.animals.pooanimals;
-package fr.afpa.heritage;
 
 public class Bird extends Animal {
 
@@ -21,15 +20,18 @@ public class Bird extends Animal {
         this.wingSpan = wingSpan;
     }
 
+    @Override
+    public String displayLocomotionType() {
+        return " Mode de déplacement le plus courant: Vol ";
+    }
+
     // Méthodes
     @Override
     public String toString() {
-        return "Bird [species=" + species + ", wingSpan=" + wingSpan + ", ecosystem=" + ecosystem
-                + ", LocomotionType=" + displayLocomotionType() + "]";
+        return " Bird [species = " + getSpecies()
+                + ", wingSpan = " + getWingSpan()
+                + ", ecosystem = " + getEcosystem()
+                + ", LocomotionType = " + displayLocomotionType() + "]";
     }
 
-    @Override
-    public String displayLocomotionType() {
-        return "Vol";
-    }
 }

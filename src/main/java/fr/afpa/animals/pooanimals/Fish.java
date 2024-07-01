@@ -1,5 +1,4 @@
 package fr.afpa.animals.pooanimals;
-package fr.afpa.heritage;
 
 public class Fish extends Animal {
 
@@ -21,15 +20,18 @@ public class Fish extends Animal {
         this.preferredWaterDepth = preferredWaterDepth;
     }
 
+    @Override
+    public String displayLocomotionType() {
+        return " Mode de déplacement le plus courant: Nage ";
+    }
+
     // Méthodes
     @Override
     public String toString() {
-        return "Fish [species=" + species + ", preferredWaterDepth=" + preferredWaterDepth + ", ecosystem=" + ecosystem
-                + ", LocomotionType=" + displayLocomotionType() + "]";
+        return " Fish [species = " + getSpecies()
+                + ", preferredWaterDepth = " + getPreferredWaterDepth()
+                + ", ecosystem = " + getEcosystem()
+                + ", LocomotionType = " + displayLocomotionType() + "]";
     }
 
-    @Override
-    public String displayLocomotionType() {
-        return "Nage";
-    }
 }
